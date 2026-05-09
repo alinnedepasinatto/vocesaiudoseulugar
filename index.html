@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Mentoria O Seu Lugar®️ | Diagnóstico Gratuito</title>
+
+  <meta name="description" content="Diagnóstico gratuito para mulheres que se sentem cansadas, sobrecarregadas e desconectadas de si mesmas." />
+
+  <!-- SEO -->
+  <meta property="og:title" content="Mentoria O Seu Lugar®️" />
+  <meta property="og:description" content="Descubra se você saiu do seu lugar emocional." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root{
+      --green:#0D5C3D;
+      --green-dark:#083D29;
+      --gold:#C8A96B;
+      --gold-soft:#E7D3A9;
+      --white:#FFFFFF;
+      --bg:#F8FAF8;
+      --text:#1F2937;
+      --soft:#6B7280;
+      --line:#E5E7EB;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .container{
+      width:100%;
+      max-width:1100px;
+      margin:auto;
+      padding:0 20px;
+    }
+
+    .hero{
+      background:white;
+      padding:60px 20px;
+    }
+
+    .hero-card{
+      background:white;
+      border-radius:24px;
+      padding:50px;
+      box-shadow:0 15px 40px rgba(0,0,0,.06);
+      border:1px solid var(--line);
+      text-align:center;
+    }
+
+    .logo{
+      max-width:420px;
+      margin:0 auto 30px;
+    }
+
+    .tag{
+      display:inline-block;
+      background:#EEF7F1;
+      color:var(--green);
+      padding:10px 18px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:700;
+      margin-bottom:25px;
+    }
+
+    h1{
+      font-size:clamp(34px,6vw,62px);
+      line-height:1.1;
+      margin-bottom:20px;
+      color:var(--green-dark);
+    }
+
+    .gold{
+      color:var(--gold);
+    }
+
+    .subtitle{
+      max-width:780px;
+      margin:auto;
+      color:var(--soft);
+      font-size:20px;
+    }
+
+    .section{
+      padding:70px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:40px;
+      margin-bottom:15px;
+      color:var(--green-dark);
+    }
+
+    .section-text{
+      text-align:center;
+      max-width:780px;
+      margin:0 auto 40px;
+      color:var(--soft);
+    }
+
+    .quiz-card{
+      background:white;
+      border-radius:24px;
+      padding:40px;
+      box-shadow:0 12px 35px rgba(0,0,0,.05);
+      border:1px solid var(--line);
+      margin-bottom:30px;
+    }
+
+    .question{
+      margin-bottom:40px;
+    }
+
+    .question h3{
+      color:var(--green-dark);
+      margin-bottom:18px;
+      font-size:24px;
+    }
+
+    .option{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:14px 18px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      margin-bottom:12px;
+      transition:.3s;
+      cursor:pointer;
+      background:white;
+    }
+
+    .option:hover{
+      border-color:var(--gold);
+      background:#fffdf8;
+    }
+
+    input[type="checkbox"]{
+      accent-color:var(--green);
+      width:18px;
+      height:18px;
+    }
+
+    .form-box{
+      margin-top:50px;
+      background:#FDFCF8;
+      border:1px solid #EFE5D0;
+      padding:30px;
+      border-radius:20px;
+    }
+
+    .form-box h3{
+      margin-bottom:10px;
+      color:var(--green-dark);
+    }
+
+    .input-group{
+      margin-top:18px;
+    }
+
+    input{
+      width:100%;
+      padding:16px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      font-size:16px;
+      font-family:'Poppins',sans-serif;
+    }
+
+    .btn{
+      display:inline-block;
+      width:100%;
+      margin-top:25px;
+      background:var(--green);
+      color:white;
+      padding:18px;
+      border:none;
+      border-radius:14px;
+      font-size:18px;
+      font-weight:700;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      background:var(--green-dark);
+      transform:translateY(-2px);
+    }
+
+    .result{
+      display:none;
+      margin-top:40px;
+      background:white;
+      border-radius:24px;
+      padding:40px;
+      box-shadow:0 10px 30px rgba(0,0,0,.05);
+      border-left:6px solid var(--gold);
+    }
+
+    .result h2{
+      color:var(--green-dark);
+      margin-bottom:18px;
+      font-size:34px;
+    }
+
+    .result p{
+      margin-bottom:15px;
+      color:var(--soft);
+      font-size:18px;
+    }
+
+    .cta-btn{
+      display:inline-block;
+      margin-top:20px;
+      background:var(--gold);
+      color:white;
+      padding:16px 28px;
+      border-radius:14px;
+      font-weight:700;
+      text-decoration:none;
+      transition:.3s;
+    }
+
+    .cta-btn:hover{
+      background:#b89452;
+    }
+
+    footer{
+      background:var(--green-dark);
+      color:white;
+      text-align:center;
+      padding:30px 20px;
+      margin-top:80px;
+    }
+
+    .whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      width:65px;
+      height:65px;
+      background:#25D366;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 10px 30px rgba(0,0,0,.2);
+      z-index:999;
+    }
+
+    .whatsapp svg{
+      width:32px;
+      fill:white;
+    }
+
+    @media(max-width:768px){
+
+      .hero-card{
+        padding:35px 25px;
+      }
+
+      .quiz-card{
+        padding:25px;
+      }
+
+      .section-title{
+        font-size:32px;
+      }
+
+      h1{
+        font-size:42px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="container">
+
+      <div class="hero-card">
+
+        <img src="logo.png" alt="Mentoria O Seu Lugar" class="logo">
+
+        <div class="tag">
+          DIAGNÓSTICO GRATUITO
+        </div>
+
+        <h1>
+          Você saiu do <span class="gold">seu lugar?</span>
+        </h1>
+
+        <p class="subtitle">
+          Para mulheres que se sentem cansadas, sobrecarregadas e distantes de si mesmas… mesmo tentando fazer tudo dar certo.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Como você tem se sentido?
+      </h2>
+
+      <p class="section-text">
+        Marque as opções que mais representam você hoje.
+      </p>
+
+      <div class="quiz-card">
+
+        <div class="question">
+
+          <h3>Como você tem se sentido?</h3>
+
+          <label class="option"><input type="checkbox"> Estou cansada emocionalmente</label>
+          <label class="option"><input type="checkbox"> Sinto que carrego tudo sozinha</label>
+          <label class="option"><input type="checkbox"> Tenho dificuldade de me priorizar</label>
+          <label class="option"><input type="checkbox"> Me sinto distante de mim mesma</label>
+          <label class="option"><input type="checkbox"> Vivo tentando dar conta de tudo</label>
+          <label class="option"><input type="checkbox"> Sinto falta de leveza</label>
+          <label class="option"><input type="checkbox"> Me calo para evitar conflitos</label>
+          <label class="option"><input type="checkbox"> Me sinto sozinha dentro do relacionamento</label>
+          <label class="option"><input type="checkbox"> Tenho medo de decepcionar as pessoas</label>
+          <label class="option"><input type="checkbox"> Sinto que fui me deixando por último</label>
+
+        </div>
+
+        <div class="question">
+
+          <h3>O que mais tem pesado em você hoje?</h3>
+
+          <label class="option"><input type="checkbox"> Relacionamento</label>
+          <label class="option"><input type="checkbox"> Sobrecarga emocional</label>
+          <label class="option"><input type="checkbox"> Excesso de responsabilidade</label>
+          <label class="option"><input type="checkbox"> Falta de conexão comigo mesma</label>
+          <label class="option"><input type="checkbox"> Cansaço mental</label>
+          <label class="option"><input type="checkbox"> Sensação de não ser valorizada</label>
+
+        </div>
+
+        <div class="question">
+
+          <h3>O que você mais deseja sentir novamente?</h3>
+
+          <label class="option"><input type="checkbox"> Paz</label>
+          <label class="option"><input type="checkbox"> Leveza</label>
+          <label class="option"><input type="checkbox"> Segurança emocional</label>
+          <label class="option"><input type="checkbox"> Conexão comigo mesma</label>
+          <label class="option"><input type="checkbox"> Presença no relacionamento</label>
+          <label class="option"><input type="checkbox"> Vontade de viver leve novamente</label>
+
+        </div>
+
+        <div class="form-box">
+
+          <h3>Antes de acessar seu resultado</h3>
+
+          <p>
+            Preencha seus dados abaixo para receber seu resultado completo:
+          </p>
+
+          <div class="input-group">
+            <input type="text" placeholder="Seu nome">
+          </div>
+
+          <div class="input-group">
+            <input type="text" placeholder="Seu WhatsApp">
+          </div>
+
+          <button class="btn" onclick="mostrarResultado()">
+            VER MEU RESULTADO
+          </button>
+
+        </div>
+
+        <div class="result" id="resultado">
+
+          <h2>
+            Você saiu do seu lugar pela sobrecarga
+          </h2>
+
+          <p>
+            Você não está apenas cansada.
+            Você está carregando mais do que deveria.
+          </p>
+
+          <p>
+            Por muito tempo, você ocupou o lugar de quem resolve, sustenta, organiza e segura tudo.
+          </p>
+
+          <p>
+            Mas esse peso está te afastando de você.
+          </p>
+
+          <p>
+            <strong>Próximo passo</strong><br><br>
+
+            Na Sessão O Seu Lugar®️, nós vamos olhar com profundidade para onde você começou a carregar tudo sozinha e como começar a voltar para o seu lugar com mais leveza.
+          </p>
+
+          <a
+            href="https://wa.me/5549999728631?text=Ol%C3%A1%2C%20quero%20agendar%20minha%20sess%C3%A3o%20da%20Mentoria%20O%20Seu%20Lugar"
+            class="cta-btn"
+            target="_blank"
+          >
+            AGENDAR MINHA SESSÃO
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © Mentoria O Seu Lugar®️ — Todos os direitos reservados.
+  </footer>
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/5549999728631?text=Ol%C3%A1%2C%20quero%20agendar%20minha%20sess%C3%A3o%20da%20Mentoria%20O%20Seu%20Lugar"
+    target="_blank"
+    aria-label="WhatsApp"
+  >
+
+    <svg viewBox="0 0 24 24">
+      <path d="M20.5 3.5A10 10 0 0 0 3.2 17.7L2 22l4.4-1.2A10 10 0 1 0 20.5 3.5Z"/>
+    </svg>
+
+  </a>
+
+  <script>
+
+    function mostrarResultado(){
+
+      document.getElementById('resultado').style.display = 'block';
+
+      document.getElementById('resultado').scrollIntoView({
+        behavior:'smooth'
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>
