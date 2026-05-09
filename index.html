@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Mentoria O Seu Lugar®️ | Diagnóstico Gratuito</title>
 
-  <meta name="description" content="Diagnóstico gratuito para mulheres que se sentem cansadas, sobrecarregadas e desconectadas de si mesmas." />
+  <meta name="description" content="Descubra se você saiu do seu lugar emocional e volte a se sentir leve novamente." />
 
   <!-- SEO -->
-  <meta property="og:title" content="Mentoria O Seu Lugar®️" />
-  <meta property="og:description" content="Descubra se você saiu do seu lugar emocional." />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mentoria O Seu Lugar®️">
+  <meta property="og:description" content="Diagnóstico gratuito para mulheres emocionalmente sobrecarregadas.">
+  <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,21 +21,25 @@
   <style>
 
     :root{
-      --green:#0D5C3D;
-      --green-dark:#083D29;
-      --gold:#C8A96B;
-      --gold-soft:#E7D3A9;
+      --green:#005B2E;
+      --green-dark:#014122;
+      --gold:#C8A968;
+      --gold-dark:#B28D48;
       --white:#FFFFFF;
-      --bg:#F8FAF8;
-      --text:#1F2937;
+      --bg:#F7F7F5;
+      --text:#1E293B;
       --soft:#6B7280;
-      --line:#E5E7EB;
+      --line:#E8E8E8;
     }
 
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
     }
 
     body{
@@ -55,41 +61,48 @@
       padding:0 20px;
     }
 
+    /* HERO */
+
     .hero{
-      background:white;
-      padding:60px 20px;
+      padding:40px 20px 70px;
     }
 
     .hero-card{
       background:white;
-      border-radius:24px;
-      padding:50px;
-      box-shadow:0 15px 40px rgba(0,0,0,.06);
+      border-radius:36px;
+      padding:40px 26px;
+      box-shadow:0 10px 40px rgba(0,0,0,.05);
       border:1px solid var(--line);
       text-align:center;
+      overflow:hidden;
     }
 
     .logo{
-      max-width:420px;
-      margin:0 auto 30px;
+      width:100%;
+      max-width:280px;
+      height:auto;
+      margin:0 auto 28px;
+      object-fit:contain;
     }
 
     .tag{
       display:inline-block;
-      background:#EEF7F1;
+      background:#EEF2EE;
       color:var(--green);
-      padding:10px 18px;
+      padding:12px 24px;
       border-radius:999px;
       font-size:14px;
       font-weight:700;
-      margin-bottom:25px;
+      margin-bottom:26px;
+      letter-spacing:.03em;
     }
 
     h1{
-      font-size:clamp(34px,6vw,62px);
-      line-height:1.1;
-      margin-bottom:20px;
+      font-size:clamp(42px,9vw,72px);
+      line-height:1.05;
       color:var(--green-dark);
+      margin-bottom:24px;
+      font-weight:800;
     }
 
     .gold{
@@ -97,11 +110,15 @@
     }
 
     .subtitle{
-      max-width:780px;
+      max-width:760px;
       margin:auto;
+      font-size:22px;
       color:var(--soft);
-      font-size:20px;
+      line-height:1.8;
+      font-weight:400;
     }
+
+    /* SECTION */
 
     .section{
       padding:70px 20px;
@@ -110,8 +127,9 @@
     .section-title{
       text-align:center;
       font-size:40px;
-      margin-bottom:15px;
       color:var(--green-dark);
+      margin-bottom:14px;
+      font-weight:800;
     }
 
     .section-text{
@@ -119,35 +137,37 @@
       max-width:780px;
       margin:0 auto 40px;
       color:var(--soft);
+      font-size:18px;
     }
+
+    /* QUIZ */
 
     .quiz-card{
       background:white;
-      border-radius:24px;
+      border-radius:30px;
       padding:40px;
-      box-shadow:0 12px 35px rgba(0,0,0,.05);
+      box-shadow:0 10px 35px rgba(0,0,0,.04);
       border:1px solid var(--line);
-      margin-bottom:30px;
     }
 
     .question{
-      margin-bottom:40px;
+      margin-bottom:45px;
     }
 
     .question h3{
+      font-size:26px;
+      margin-bottom:20px;
       color:var(--green-dark);
-      margin-bottom:18px;
-      font-size:24px;
     }
 
     .option{
       display:flex;
       align-items:center;
-      gap:12px;
-      padding:14px 18px;
+      gap:14px;
+      padding:16px 18px;
       border:1px solid var(--line);
-      border-radius:14px;
-      margin-bottom:12px;
+      border-radius:16px;
+      margin-bottom:14px;
       transition:.3s;
       cursor:pointer;
       background:white;
@@ -155,51 +175,70 @@
 
     .option:hover{
       border-color:var(--gold);
-      background:#fffdf8;
+      background:#FFFCF7;
+      transform:translateY(-2px);
     }
 
     input[type="checkbox"]{
+      width:20px;
+      height:20px;
       accent-color:var(--green);
-      width:18px;
-      height:18px;
+      flex-shrink:0;
     }
+
+    .option span{
+      font-size:17px;
+      color:var(--text);
+    }
+
+    /* FORM */
 
     .form-box{
       margin-top:50px;
-      background:#FDFCF8;
-      border:1px solid #EFE5D0;
-      padding:30px;
-      border-radius:20px;
+      background:#FAF8F2;
+      border:1px solid #EFE6D4;
+      padding:35px;
+      border-radius:24px;
     }
 
     .form-box h3{
-      margin-bottom:10px;
+      font-size:28px;
       color:var(--green-dark);
+      margin-bottom:12px;
+    }
+
+    .form-box p{
+      color:var(--soft);
+      margin-bottom:20px;
     }
 
     .input-group{
-      margin-top:18px;
+      margin-top:16px;
     }
 
     input{
       width:100%;
-      padding:16px;
-      border-radius:12px;
+      padding:18px;
+      border-radius:14px;
       border:1px solid var(--line);
       font-size:16px;
       font-family:'Poppins',sans-serif;
+      outline:none;
+    }
+
+    input:focus{
+      border-color:var(--gold);
     }
 
     .btn{
-      display:inline-block;
       width:100%;
-      margin-top:25px;
+      border:none;
+      margin-top:24px;
+      padding:20px;
+      border-radius:16px;
       background:var(--green);
       color:white;
-      padding:18px;
-      border:none;
-      border-radius:14px;
-      font-size:18px;
+      font-size:17px;
       font-weight:700;
       cursor:pointer;
       transition:.3s;
@@ -210,26 +249,29 @@
       transform:translateY(-2px);
     }
 
+    /* RESULTADO */
+
     .result{
       display:none;
       margin-top:40px;
       background:white;
       border-radius:24px;
       padding:40px;
-      box-shadow:0 10px 30px rgba(0,0,0,.05);
       border-left:6px solid var(--gold);
+      box-shadow:0 10px 30px rgba(0,0,0,.04);
     }
 
     .result h2{
+      font-size:36px;
+      line-height:1.2;
       color:var(--green-dark);
-      margin-bottom:18px;
-      font-size:34px;
+      margin-bottom:24px;
     }
 
     .result p{
-      margin-bottom:15px;
       color:var(--soft);
       font-size:18px;
+      margin-bottom:18px;
     }
 
     .cta-btn{
@@ -237,33 +279,38 @@
       margin-top:20px;
       background:var(--gold);
       color:white;
-      padding:16px 28px;
+      padding:18px 30px;
       border-radius:14px;
-      font-weight:700;
       text-decoration:none;
+      font-weight:700;
       transition:.3s;
     }
 
     .cta-btn:hover{
-      background:#b89452;
+      background:var(--gold-dark);
     }
 
+    /* FOOTER */
+
     footer{
+      margin-top:80px;
       background:var(--green-dark);
       color:white;
       text-align:center;
       padding:30px 20px;
-      margin-top:80px;
+      font-size:14px;
     }
+
+    /* WHATSAPP */
 
     .whatsapp{
       position:fixed;
-      bottom:20px;
-      right:20px;
-      width:65px;
-      height:65px;
-      background:#25D366;
+      bottom:22px;
+      right:22px;
+      width:68px;
+      height:68px;
       border-radius:50%;
+      background:#25D366;
       display:flex;
       align-items:center;
       justify-content:center;
@@ -272,36 +319,72 @@
     }
 
     .whatsapp svg{
-      width:32px;
+      width:34px;
       fill:white;
     }
 
+    /* MOBILE */
+
     @media(max-width:768px){
 
+      .hero{
+        padding:24px 14px 50px;
+      }
+
       .hero-card{
-        padding:35px 25px;
+        padding:30px 20px;
+        border-radius:28px;
+      }
+
+      .logo{
+        max-width:240px;
+      }
+
+      h1{
+        font-size:58px;
+      }
+
+      .subtitle{
+        font-size:18px;
+        line-height:1.7;
       }
 
       .quiz-card{
-        padding:25px;
+        padding:24px;
+      }
+
+      .question h3{
+        font-size:22px;
       }
 
       .section-title{
         font-size:32px;
       }
 
-      h1{
-        font-size:42px;
+      .form-box{
+        padding:24px;
+      }
+
+      .result{
+        padding:28px;
+      }
+
+      .result h2{
+        font-size:28px;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
 
+  <!-- HERO -->
+
   <section class="hero">
+
     <div class="container">
 
       <div class="hero-card">
@@ -323,7 +406,10 @@
       </div>
 
     </div>
+
   </section>
+
+  <!-- QUIZ -->
 
   <section class="section">
 
@@ -339,52 +425,62 @@
 
       <div class="quiz-card">
 
+        <!-- PERGUNTA 1 -->
+
         <div class="question">
 
           <h3>Como você tem se sentido?</h3>
 
-          <label class="option"><input type="checkbox"> Estou cansada emocionalmente</label>
-          <label class="option"><input type="checkbox"> Sinto que carrego tudo sozinha</label>
-          <label class="option"><input type="checkbox"> Tenho dificuldade de me priorizar</label>
-          <label class="option"><input type="checkbox"> Me sinto distante de mim mesma</label>
-          <label class="option"><input type="checkbox"> Vivo tentando dar conta de tudo</label>
-          <label class="option"><input type="checkbox"> Sinto falta de leveza</label>
-          <label class="option"><input type="checkbox"> Me calo para evitar conflitos</label>
-          <label class="option"><input type="checkbox"> Me sinto sozinha dentro do relacionamento</label>
-          <label class="option"><input type="checkbox"> Tenho medo de decepcionar as pessoas</label>
-          <label class="option"><input type="checkbox"> Sinto que fui me deixando por último</label>
+          <label class="option"><input type="checkbox"><span>Estou cansada emocionalmente</span></label>
+          <label class="option"><input type="checkbox"><span>Sinto que carrego tudo sozinha</span></label>
+          <label class="option"><input type="checkbox"><span>Tenho dificuldade de me priorizar</span></label>
+          <label class="option"><input type="checkbox"><span>Me sinto distante de mim mesma</span></label>
+          <label class="option"><input type="checkbox"><span>Vivo tentando dar conta de tudo</span></label>
+          <label class="option"><input type="checkbox"><span>Sinto falta de leveza</span></label>
+          <label class="option"><input type="checkbox"><span>Me calo para evitar conflitos</span></label>
+          <label class="option"><input type="checkbox"><span>Me sinto sozinha dentro do relacionamento</span></label>
+          <label class="option"><input type="checkbox"><span>Tenho medo de decepcionar as pessoas</span></label>
+          <label class="option"><input type="checkbox"><span>Sinto que fui me deixando por último</span></label>
 
         </div>
+
+        <!-- PERGUNTA 2 -->
 
         <div class="question">
 
           <h3>O que mais tem pesado em você hoje?</h3>
 
-          <label class="option"><input type="checkbox"> Relacionamento</label>
-          <label class="option"><input type="checkbox"> Sobrecarga emocional</label>
-          <label class="option"><input type="checkbox"> Excesso de responsabilidade</label>
-          <label class="option"><input type="checkbox"> Falta de conexão comigo mesma</label>
-          <label class="option"><input type="checkbox"> Cansaço mental</label>
-          <label class="option"><input type="checkbox"> Sensação de não ser valorizada</label>
+          <label class="option"><input type="checkbox"><span>Relacionamento</span></label>
+          <label class="option"><input type="checkbox"><span>Sobrecarga emocional</span></label>
+          <label class="option"><input type="checkbox"><span>Excesso de responsabilidade</span></label>
+          <label class="option"><input type="checkbox"><span>Falta de conexão comigo mesma</span></label>
+          <label class="option"><input type="checkbox"><span>Cansaço mental</span></label>
+          <label class="option"><input type="checkbox"><span>Sensação de não ser valorizada</span></label>
 
         </div>
+
+        <!-- PERGUNTA 3 -->
 
         <div class="question">
 
           <h3>O que você mais deseja sentir novamente?</h3>
 
-          <label class="option"><input type="checkbox"> Paz</label>
-          <label class="option"><input type="checkbox"> Leveza</label>
-          <label class="option"><input type="checkbox"> Segurança emocional</label>
-          <label class="option"><input type="checkbox"> Conexão comigo mesma</label>
-          <label class="option"><input type="checkbox"> Presença no relacionamento</label>
-          <label class="option"><input type="checkbox"> Vontade de viver leve novamente</label>
+          <label class="option"><input type="checkbox"><span>Paz</span></label>
+          <label class="option"><input type="checkbox"><span>Leveza</span></label>
+          <label class="option"><input type="checkbox"><span>Segurança emocional</span></label>
+          <label class="option"><input type="checkbox"><span>Conexão comigo mesma</span></label>
+          <label class="option"><input type="checkbox"><span>Presença no relacionamento</span></label>
+          <label class="option"><input type="checkbox"><span>Vontade de viver leve novamente</span></label>
 
         </div>
 
+        <!-- FORM -->
+
         <div class="form-box">
 
-          <h3>Antes de acessar seu resultado</h3>
+          <h3>
+            Antes de acessar seu resultado
+          </h3>
 
           <p>
             Preencha seus dados abaixo para receber seu resultado completo:
@@ -403,6 +499,8 @@
           </button>
 
         </div>
+
+        <!-- RESULTADO -->
 
         <div class="result" id="resultado">
 
@@ -424,7 +522,7 @@
           </p>
 
           <p>
-            <strong>Próximo passo</strong><br><br>
+            <strong>Próximo passo:</strong><br><br>
 
             Na Sessão O Seu Lugar®️, nós vamos olhar com profundidade para onde você começou a carregar tudo sozinha e como começar a voltar para o seu lugar com mais leveza.
           </p>
@@ -433,6 +531,7 @@
             href="https://wa.me/5549999728631?text=Ol%C3%A1%2C%20quero%20agendar%20minha%20sess%C3%A3o%20da%20Mentoria%20O%20Seu%20Lugar"
             class="cta-btn"
             target="_blank"
+            rel="noopener"
           >
             AGENDAR MINHA SESSÃO
           </a>
@@ -445,30 +544,39 @@
 
   </section>
 
+  <!-- FOOTER -->
+
   <footer>
     © Mentoria O Seu Lugar®️ — Todos os direitos reservados.
   </footer>
 
+  <!-- WHATSAPP -->
+
   <a
-    class="whatsapp"
     href="https://wa.me/5549999728631?text=Ol%C3%A1%2C%20quero%20agendar%20minha%20sess%C3%A3o%20da%20Mentoria%20O%20Seu%20Lugar"
+    class="whatsapp"
     target="_blank"
+    rel="noopener"
     aria-label="WhatsApp"
   >
 
-    <svg viewBox="0 0 24 24">
-      <path d="M20.5 3.5A10 10 0 0 0 3.2 17.7L2 22l4.4-1.2A10 10 0 1 0 20.5 3.5Z"/>
+    <svg viewBox="0 0 32 32">
+      <path d="M16 .396C7.163.396 0 7.559 0 16.396c0 2.82.737 5.577 2.137 8.01L0 32l7.807-2.093a15.92 15.92 0 0 0 8.193 2.253c8.837 0 16-7.163 16-16S24.837.396 16 .396z"/>
     </svg>
 
   </a>
+
+  <!-- SCRIPT -->
 
   <script>
 
     function mostrarResultado(){
 
-      document.getElementById('resultado').style.display = 'block';
+      const resultado = document.getElementById('resultado');
 
-      document.getElementById('resultado').scrollIntoView({
+      resultado.style.display = 'block';
+
+      resultado.scrollIntoView({
         behavior:'smooth'
       });
 
@@ -477,4 +585,5 @@
   </script>
 
 </body>
+
 </html>
