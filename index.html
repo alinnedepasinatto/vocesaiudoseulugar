@@ -87,21 +87,12 @@
       font-size:clamp(34px,7vw,56px);
       line-height:1.05;
       color:var(--green-dark);
-      margin-bottom:22px;
+      margin-bottom:10px;
       font-weight:800;
     }
 
     .gold{
       color:var(--gold);
-    }
-
-    .subtitle{
-      max-width:720px;
-      margin:auto;
-      font-size:18px;
-      color:var(--soft);
-      line-height:1.8;
-      font-weight:400;
     }
 
     /* SECTION */
@@ -173,33 +164,7 @@
       line-height:1.7;
     }
 
-    /* FORM */
-
-    .form-box{
-      margin-top:40px;
-      background:#FAF8F2;
-      border:1px solid #EFE6D4;
-      padding:30px;
-      border-radius:24px;
-    }
-
-    .input-group{
-      margin-top:16px;
-    }
-
-    input{
-      width:100%;
-      padding:18px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      font-size:15px;
-      font-family:'Poppins',sans-serif;
-      outline:none;
-    }
-
-    input:focus{
-      border-color:var(--gold);
-    }
+    /* BUTTON */
 
     .btn{
       width:100%;
@@ -311,10 +276,6 @@
         font-size:42px;
       }
 
-      .subtitle{
-        font-size:16px;
-      }
-
       .quiz-card{
         padding:24px;
       }
@@ -354,10 +315,6 @@
         <h1>
           Você saiu do <span class="gold">seu lugar?</span>
         </h1>
-
-        <p class="subtitle">
-          Descubra o que pode estar te afastando de você mesma sem perceber.
-        </p>
 
       </div>
 
@@ -449,19 +406,11 @@
 
         </div>
 
-        <!-- FORM -->
+        <!-- BOTÃO -->
 
-        <div class="form-box">
+        <div style="margin-top:40px;">
 
-          <div class="input-group">
-            <input type="text" placeholder="Seu nome">
-          </div>
-
-          <div class="input-group">
-            <input type="text" placeholder="Seu WhatsApp">
-          </div>
-
-          <button class="btn" onclick="mostrarResultado()">
+          <button class="btn" onclick="mostrarResultado(event)">
             VER MEU RESULTADO
           </button>
 
@@ -537,9 +486,77 @@
 
   <script>
 
-    function mostrarResultado(){
+    function mostrarResultado(event){
 
-      const resultado = document.getElementById('resultado');
+      event.preventDefault();
+
+      const checks =
+      document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+      if(checks === 0){
+
+        alert('Selecione pelo menos uma opção para continuar.');
+
+        return;
+
+      }
+
+      const resultado =
+      document.getElementById('resultado');
+
+      const titulo =
+      resultado.querySelector('h2');
+
+      const textos =
+      resultado.querySelectorAll('p');
+
+      if(checks <= 5){
+
+        titulo.innerHTML =
+        'Você saiu do seu lugar pela sobrecarga';
+
+        textos[0].innerHTML =
+        'Você não está apenas cansada. Você está carregando mais do que deveria.';
+
+        textos[1].innerHTML =
+        'Por muito tempo, você ocupou o lugar de quem resolve, sustenta, organiza e segura tudo.';
+
+        textos[2].innerHTML =
+        'Mas esse peso está te afastando de você mesma.';
+
+      }
+
+      else if(checks <= 10){
+
+        titulo.innerHTML =
+        'Você saiu do seu lugar tentando sustentar tudo';
+
+        textos[0].innerHTML =
+        'Você foi se colocando em último lugar para manter tudo funcionando.';
+
+        textos[1].innerHTML =
+        'Aos poucos, foi deixando suas emoções, necessidades e limites de lado.';
+
+        textos[2].innerHTML =
+        'Agora seu emocional está pedindo acolhimento e presença.';
+
+      }
+
+      else{
+
+        titulo.innerHTML =
+        'Você está emocionalmente desconectada de si mesma';
+
+        textos[0].innerHTML =
+        'Você aprendeu a sobreviver emocionalmente por muito tempo.';
+
+        textos[1].innerHTML =
+        'Mas chegou um momento em que você começou a se perder de si mesma.';
+
+        textos[2].innerHTML =
+        'E agora sente falta de leveza, conexão e paz emocional.';
+
+      }
 
       resultado.style.display = 'block';
 
