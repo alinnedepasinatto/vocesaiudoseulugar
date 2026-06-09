@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Mentoria O Seu Lugar®️ | Diagnóstico Gratuito</title>
-
   <meta name="description" content="Descubra se você saiu do seu lugar emocional e volte a se sentir leve novamente." />
 
   <meta property="og:title" content="Mentoria O Seu Lugar®️">
@@ -15,11 +12,9 @@
   <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-
     :root{
       --green:#005B2E;
       --green-dark:#014122;
@@ -32,15 +27,9 @@
       --line:#E8E8E8;
     }
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+    *{margin:0;padding:0;box-sizing:border-box}
 
-    html{
-      scroll-behavior:smooth;
-    }
+    html{scroll-behavior:smooth}
 
     body{
       font-family:'Poppins',sans-serif;
@@ -56,11 +45,7 @@
       padding:0 20px;
     }
 
-    /* HERO */
-
-    .hero{
-      padding:40px 20px 50px;
-    }
+    .hero{padding:40px 20px 50px}
 
     .hero-card{
       background:white;
@@ -91,15 +76,9 @@
       font-weight:800;
     }
 
-    .gold{
-      color:var(--gold);
-    }
+    .gold{color:var(--gold)}
 
-    /* SECTION */
-
-    .section{
-      padding:20px 20px 70px;
-    }
+    .section{padding:20px 20px 70px}
 
     .section-text{
       text-align:center;
@@ -110,8 +89,6 @@
       line-height:1.9;
     }
 
-    /* QUIZ */
-
     .quiz-card{
       background:white;
       border-radius:30px;
@@ -120,9 +97,7 @@
       border:1px solid var(--line);
     }
 
-    .question{
-      margin-bottom:42px;
-    }
+    .question{margin-bottom:42px}
 
     .question h3{
       font-size:22px;
@@ -164,8 +139,6 @@
       line-height:1.7;
     }
 
-    /* BUTTON */
-
     .btn{
       width:100%;
       border:none;
@@ -184,8 +157,6 @@
       background:var(--green-dark);
       transform:translateY(-2px);
     }
-
-    /* RESULTADO */
 
     .result{
       display:none;
@@ -223,11 +194,29 @@
       transition:.3s;
     }
 
-    .cta-btn:hover{
-      background:var(--gold-dark);
+    .cta-btn:hover{background:var(--gold-dark)}
+
+    .session-box{
+      margin-top:42px;
+      padding-top:34px;
+      border-top:1px solid var(--line);
     }
 
-    /* FOOTER */
+    .price-box{
+      background:#FFFCF7;
+      border:2px solid var(--gold);
+      border-radius:20px;
+      padding:26px;
+      margin:30px 0;
+      text-align:center;
+    }
+
+    .price{
+      font-size:42px;
+      font-weight:800;
+      color:var(--green-dark);
+      margin:8px 0 10px;
+    }
 
     footer{
       margin-top:70px;
@@ -237,8 +226,6 @@
       padding:28px 20px;
       font-size:13px;
     }
-
-    /* WHATSAPP */
 
     .whatsapp{
       position:fixed;
@@ -260,173 +247,92 @@
       fill:white;
     }
 
-    /* MOBILE */
-
     @media(max-width:768px){
-
-      .hero{
-        padding:24px 14px 40px;
-      }
-
-      .hero-card{
-        padding:40px 24px;
-      }
-
-      h1{
-        font-size:42px;
-      }
-
-      .quiz-card{
-        padding:24px;
-      }
-
-      .question h3{
-        font-size:20px;
-      }
-
-      .result{
-        padding:26px;
-      }
-
-      .result h2{
-        font-size:26px;
-      }
-
+      .hero{padding:24px 14px 40px}
+      .hero-card{padding:40px 24px}
+      h1{font-size:42px}
+      .quiz-card{padding:24px}
+      .question h3{font-size:20px}
+      .result{padding:26px}
+      .result h2{font-size:26px}
+      .price{font-size:36px}
     }
-
   </style>
-
 </head>
 
 <body>
 
-  <!-- HERO -->
-
   <section class="hero">
-
     <div class="container">
-
       <div class="hero-card">
-
-        <div class="tag">
-          DIAGNÓSTICO GRATUITO
-        </div>
+        <div class="tag">DIAGNÓSTICO GRATUITO</div>
 
         <h1>
           Você saiu do <span class="gold">seu lugar?</span>
         </h1>
-
       </div>
-
     </div>
-
   </section>
 
-  <!-- QUIZ -->
-
   <section class="section">
-
     <div class="container">
 
       <p class="section-text">
-
         Este diagnóstico vai te ajudar a olhar com carinho para o que está te afastando de você mesma e entender onde você saiu do seu lugar.<br><br>
-
         Marque as opções que mais representam você hoje e receba seu resultado ao final.
-
       </p>
 
       <div class="quiz-card">
 
-        <!-- PERGUNTA 1 -->
-
         <div class="question">
-
           <h3>Como você tem se sentido?</h3>
 
           <label class="option"><input type="checkbox"><span>Estou cansada emocionalmente</span></label>
-
           <label class="option"><input type="checkbox"><span>Sinto que carrego tudo sozinha</span></label>
-
           <label class="option"><input type="checkbox"><span>Tenho dificuldade de me priorizar</span></label>
-
           <label class="option"><input type="checkbox"><span>Me sinto distante de mim mesma</span></label>
-
           <label class="option"><input type="checkbox"><span>Vivo tentando dar conta de tudo</span></label>
-
           <label class="option"><input type="checkbox"><span>Sinto falta de leveza</span></label>
-
           <label class="option"><input type="checkbox"><span>Me calo para evitar conflitos</span></label>
-
           <label class="option"><input type="checkbox"><span>Me sinto sozinha dentro do relacionamento</span></label>
-
           <label class="option"><input type="checkbox"><span>Tenho medo de decepcionar as pessoas</span></label>
-
           <label class="option"><input type="checkbox"><span>Sinto que fui me deixando por último</span></label>
-
         </div>
 
-        <!-- PERGUNTA 2 -->
-
         <div class="question">
-
           <h3>O que mais tem pesado em você hoje?</h3>
 
           <label class="option"><input type="checkbox"><span>Relacionamento</span></label>
-
           <label class="option"><input type="checkbox"><span>Sobrecarga emocional</span></label>
-
           <label class="option"><input type="checkbox"><span>Excesso de responsabilidade</span></label>
-
           <label class="option"><input type="checkbox"><span>Falta de conexão comigo mesma</span></label>
-
           <label class="option"><input type="checkbox"><span>Cansaço mental</span></label>
-
           <label class="option"><input type="checkbox"><span>Sensação de não ser valorizada</span></label>
-
         </div>
 
-        <!-- PERGUNTA 3 -->
-
         <div class="question">
-
           <h3>O que você mais deseja sentir novamente?</h3>
 
           <label class="option"><input type="checkbox"><span>Paz</span></label>
-
           <label class="option"><input type="checkbox"><span>Leveza</span></label>
-
           <label class="option"><input type="checkbox"><span>Segurança emocional</span></label>
-
           <label class="option"><input type="checkbox"><span>Conexão comigo mesma</span></label>
-
           <label class="option"><input type="checkbox"><span>Presença no relacionamento</span></label>
-
           <label class="option"><input type="checkbox"><span>Vontade de viver leve novamente</span></label>
-
         </div>
 
-        <!-- BOTÃO -->
-
         <div style="margin-top:40px;">
-
           <button class="btn" onclick="mostrarResultado(event)">
             VER MEU RESULTADO
           </button>
-
         </div>
-
-        <!-- RESULTADO -->
 
         <div class="result" id="resultado">
 
-          <h2>
-            Você saiu do seu lugar pela sobrecarga
-          </h2>
+          <h2>Você saiu do seu lugar pela sobrecarga</h2>
 
           <p>
-            Você não está apenas cansada.
-            Você está carregando mais do que deveria.
+            Você não está apenas cansada. Você está carregando mais do que deveria.
           </p>
 
           <p>
@@ -439,14 +345,13 @@
 
           <p>
             <strong>Próximo passo:</strong><br><br>
-
             Na Sessão O Seu Lugar®️, eu vou te conduzir com acolhimento e clareza para entender o que está por trás da sua sobrecarga, do seu cansaço e dessa sensação de estar distante de si mesma.
-
-Você não precisa continuar carregando tudo sozinha 🤍
+            <br><br>
+            Você não precisa continuar carregando tudo sozinha 🤍
           </p>
 
           <a
-            href="https://wa.me/5549999728631?text=Ol%C3%A1%2C%20quero%20agendar%20minha%20sess%C3%A3o%20%20O%20Seu%20Lugar"
+            href="https://wa.me/5549999728631?text=Ol%C3%A1%2C%20quero%20agendar%20minha%20sess%C3%A3o%20O%20Seu%20Lugar"
             class="cta-btn"
             target="_blank"
             rel="noopener"
@@ -454,106 +359,82 @@ Você não precisa continuar carregando tudo sozinha 🤍
             AGENDAR MINHA SESSÃO
           </a>
 
+          <div class="session-box">
+
+            <h2>Sessão O Seu Lugar®</h2>
+
+            <p>
+              Agora que você identificou uma parte da sua história, talvez tenha percebido que muitas das suas dores não começaram hoje.
+            </p>
+
+            <p>
+              O cansaço, a culpa, a sobrecarga, a dificuldade de se posicionar ou de se escolher surge quando, em algum momento da vida, assumimos um lugar que não era nosso.
+            </p>
+
+            <p>
+              O diagnóstico traz clareza.
+            </p>
+
+            <p>
+              Mas a clareza é apenas o primeiro passo.
+            </p>
+
+            <p>
+              Por isso existe a <strong>Sessão O Seu Lugar®</strong>.
+            </p>
+
+            <p>
+              Um encontro individual e online onde olhamos para a sua história e juntas, identificamos qual lugar emocional você assumiu ao longo da vida e quais pesos você vem carregando.
+            </p>
+
+            <p>
+              Muitas mulheres percebem que passaram anos tentando salvar, cuidar, agradar, sustentar ou carregar responsabilidades que nunca foram delas.
+            </p>
+
+            <p>
+              E quando isso é visto com clareza, torna-se possível iniciar um movimento de liberação e voltar para o seu lugar com mais leveza, posicionamento e direção.
+            </p>
+
+            <div class="price-box">
+              <p>O valor da Sessão O Seu Lugar® é</p>
+
+              <div class="price">R$ 260</div>
+
+              <p>
+                Toda semana escolho <strong>5 mulheres</strong> para receberem uma condição especial de
+                <strong style="color:var(--gold-dark);font-size:22px;">R$ 80</strong>.
+              </p>
+            </div>
+
+            <p>
+              Se você sente que chegou o momento de olhar para a sua história, clique no botão abaixo e me envie um áudio contando o que mais está pesando hoje na sua vida.
+            </p>
+
+            <p>
+              Eu mesma vou ouvir sua história e responder você.
+            </p>
+
+            <a
+              href="https://wa.me/5549999728631?text=Ol%C3%A1%2C%20quero%20enviar%20meu%20%C3%A1udio%20sobre%20a%20Sess%C3%A3o%20O%20Seu%20Lugar"
+              class="cta-btn"
+              target="_blank"
+              rel="noopener"
+            >
+              ENVIAR MEU ÁUDIO
+            </a>
+
+          </div>
+
         </div>
-<!-- BLOCO SESSÃO O SEU LUGAR -->
 
-<div style="margin-top:40px;padding-top:30px;border-top:1px solid #E8E8E8;">
-
-  <h2 style="font-size:30px;line-height:1.2;color:var(--green-dark);margin-bottom:22px;">
-    Sessão O Seu Lugar®
-  </h2>
-
-  <p>
-    Agora que você identificou uma parte da sua história, talvez tenha percebido que muitas das suas dores não começaram hoje.
-  </p>
-
-  <p>
-    O cansaço, a culpa, a sobrecarga, a dificuldade de se posicionar ou de se escolher surge quando, em algum momento da vida, assumimos um lugar que não era nosso.
-  </p>
-
-  <p>
-    O diagnóstico traz clareza.
-  </p>
-
-  <p>
-    Mas a clareza é apenas o primeiro passo.
-  </p>
-
-  <p>
-    Por isso existe a <strong>Sessão O Seu Lugar®</strong>.
-  </p>
-
-  <p>
-    Um encontro individual e online onde olhamos para a sua história e juntas identificamos qual lugar emocional você assumiu ao longo da vida e quais pesos você vem carregando.
-  </p>
-
-  <p>
-    Muitas mulheres percebem que passaram anos tentando salvar, cuidar, agradar, sustentar ou carregar responsabilidades que nunca foram delas.
-  </p>
-
-  <p>
-    E quando isso é visto com clareza, torna-se possível iniciar um movimento de liberação e voltar para o seu lugar com mais leveza, posicionamento e direção.
-  </p>
-
-  <div style="
-    background:#FFFCF7;
-    border:2px solid var(--gold);
-    border-radius:20px;
-    padding:24px;
-    margin:30px 0;
-    text-align:center;
-  ">
-    <p style="margin-bottom:12px;font-size:18px;">
-      O valor da Sessão O Seu Lugar® é
-    </p>
-
-    <div style="
-      font-size:42px;
-      font-weight:800;
-      color:var(--green-dark);
-      margin-bottom:12px;
-    ">
-      R$ 260
-    </div>
-
-    <p>
-      Toda semana escolho apenas <strong>5 mulheres</strong> para receberem uma condição especial de
-      <strong style="color:var(--gold-dark);font-size:22px;">R$ 80</strong>.
-    </p>
-  </div>
-
-  <p>
-    Se você sente que chegou o momento de olhar para a sua história, clique no botão abaixo e me envie um áudio contando o que mais está pesando hoje na sua vida.
-  </p>
-
-  <p>
-    Eu mesma vou ouvir sua história e responder você.
-  </p>
-
-  <a
-    href="https://wa.me/5549999728631?text=Olá,%20quero%20falar%20sobre%20a%20Sessão%20O%20Seu%20Lugar"
-    class="cta-btn"
-    target="_blank"
-    rel="noopener"
-    style="margin-top:25px;"
-  >
-    ENVIAR MEU ÁUDIO
-  </a>
-
-</div>
       </div>
 
     </div>
-
   </section>
-
-  <!-- FOOTER -->
 
   <footer>
     ©️ Mentoria O Seu Lugar®️ — Todos os direitos reservados.
   </footer>
-
-  <!-- WHATSAPP -->
 
   <a
     href="https://wa.me/5549999728631?text=Ol%C3%A1%2C%20quero%20agendar%20minha%20sess%C3%A3o%20da%20Mentoria%20O%20Seu%20Lugar"
@@ -562,87 +443,54 @@ Você não precisa continuar carregando tudo sozinha 🤍
     rel="noopener"
     aria-label="WhatsApp"
   >
-
     <svg viewBox="0 0 32 32">
       <path d="M16 .396C7.163.396 0 7.559 0 16.396c0 2.82.737 5.577 2.137 8.01L0 32l7.807-2.093a15.92 15.92 0 0 0 8.193 2.253c8.837 0 16-7.163 16-16S24.837.396 16 .396z"/>
     </svg>
-
   </a>
 
-  <!-- SCRIPT -->
-
   <script>
-
     function mostrarResultado(event){
-
       event.preventDefault();
 
-      const checks =
-      document.querySelectorAll('input[type="checkbox"]:checked').length;
+      const checks = document.querySelectorAll('input[type="checkbox"]:checked').length;
 
       if(checks === 0){
-
         alert('Selecione pelo menos uma opção para continuar.');
-
         return;
-
       }
 
-      const resultado =
-      document.getElementById('resultado');
-
-      const titulo =
-      resultado.querySelector('h2');
-
-      const textos =
-      resultado.querySelectorAll('p');
+      const resultado = document.getElementById('resultado');
+      const titulo = resultado.querySelector('h2');
+      const textos = resultado.querySelectorAll('p');
 
       if(checks <= 5){
+        titulo.innerHTML = 'Você saiu do seu lugar pela sobrecarga';
 
-        titulo.innerHTML =
-        'Você saiu do seu lugar pela sobrecarga';
+        textos[0].innerHTML = 'Você não está apenas cansada. Você está carregando mais do que deveria.';
 
-        textos[0].innerHTML =
-        'Você não está apenas cansada. Você está carregando mais do que deveria.';
+        textos[1].innerHTML = 'Por muito tempo, você ocupou o lugar de quem resolve, sustenta, organiza e segura tudo.';
 
-        textos[1].innerHTML =
-        'Por muito tempo, você ocupou o lugar de quem resolve, sustenta, organiza e segura tudo.';
-
-        textos[2].innerHTML =
-        'Mas esse peso está te afastando de você mesma.';
-
+        textos[2].innerHTML = 'Mas esse peso está te afastando de você mesma.';
       }
 
       else if(checks <= 10){
+        titulo.innerHTML = 'Você saiu do seu lugar tentando sustentar tudo';
 
-        titulo.innerHTML =
-        'Você saiu do seu lugar tentando sustentar tudo';
+        textos[0].innerHTML = 'Você foi se colocando em último lugar para manter tudo funcionando.';
 
-        textos[0].innerHTML =
-        'Você foi se colocando em último lugar para manter tudo funcionando.';
+        textos[1].innerHTML = 'Aos poucos, foi deixando suas emoções, necessidades e limites de lado.';
 
-        textos[1].innerHTML =
-        'Aos poucos, foi deixando suas emoções, necessidades e limites de lado.';
-
-        textos[2].innerHTML =
-        'Agora seu emocional está pedindo acolhimento e presença.';
-
+        textos[2].innerHTML = 'Agora seu emocional está pedindo acolhimento e presença.';
       }
 
       else{
+        titulo.innerHTML = 'Você está emocionalmente desconectada de si mesma';
 
-        titulo.innerHTML =
-        'Você está emocionalmente desconectada de si mesma';
+        textos[0].innerHTML = 'Você aprendeu a sobreviver emocionalmente por muito tempo.';
 
-        textos[0].innerHTML =
-        'Você aprendeu a sobreviver emocionalmente por muito tempo.';
+        textos[1].innerHTML = 'Mas chegou um momento em que você começou a se perder de si mesma.';
 
-        textos[1].innerHTML =
-        'Mas chegou um momento em que você começou a se perder de si mesma.';
-
-        textos[2].innerHTML =
-        'E agora sente falta de leveza, conexão e paz emocional.';
-
+        textos[2].innerHTML = 'E agora sente falta de leveza, conexão e paz emocional.';
       }
 
       resultado.style.display = 'block';
@@ -650,11 +498,8 @@ Você não precisa continuar carregando tudo sozinha 🤍
       resultado.scrollIntoView({
         behavior:'smooth'
       });
-
     }
-
   </script>
 
 </body>
-
 </html>
